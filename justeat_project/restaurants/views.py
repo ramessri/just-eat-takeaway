@@ -1,3 +1,6 @@
-from django.shortcuts import render
+from django.http import JsonResponse
+from .services import get_restaurants
 
-# Create your views here.
+def restaurant_list(request):
+    restaurants = get_restaurants('SW1A1AA')
+    return JsonResponse(restaurants, safe=False)
