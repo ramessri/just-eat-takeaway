@@ -6,7 +6,9 @@ A Django web app that lets you search for restaurants by UK postcode using the J
 
 ## Live Demo
 
-Deployed on Railway. Visit the root URL and you land straight on the search page.
+Deployed on Render (free tier). Visit the root URL and you land straight on the search page.
+
+> First visit after a period of inactivity may take ~30 seconds to load — Render spins down free services when idle and restarts them on demand.
 
 ## Features
 
@@ -20,7 +22,7 @@ Deployed on Railway. Visit the root URL and you land straight on the search page
 - **Backend:** Django 5.2, Python 3.12
 - **Frontend:** Vanilla HTML/CSS (no framework)
 - **Server:** Gunicorn + Whitenoise for static files
-- **Deployment:** Docker on Railway
+- **Deployment:** Docker on Render
 
 ## Running Locally
 
