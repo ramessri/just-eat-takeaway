@@ -1,0 +1,12 @@
+# Secrets
+.env
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
