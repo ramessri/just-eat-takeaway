@@ -24,6 +24,8 @@
         </li>
         {% endfor %}
     </ul>
+    {% elif restaurants is not None %}
+    <p>No restaurants found for that postcode.</p>
     {% endif %}
 </body>
 
