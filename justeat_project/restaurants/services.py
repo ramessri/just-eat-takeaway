@@ -19,6 +19,7 @@ def get_restaurants(postcode, limit=10):
         address = r['address']['firstLine']
         city = r['address']['city']
         postalCode = r['address']['postalCode']
+        logo = r.get('logoUrl')
 
 
         answer.append({
@@ -27,7 +28,8 @@ def get_restaurants(postcode, limit=10):
             'rating': rating,
             'address': address,
             'city': city,
-            'postalCode': postalCode
+            'postalCode': postalCode,
+            'logo': logo,
             })
 
     return answer
