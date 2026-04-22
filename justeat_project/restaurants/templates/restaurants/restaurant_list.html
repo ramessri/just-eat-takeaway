@@ -18,7 +18,10 @@
     <h2>Results</h2>
     <ul>
         {% for r in restaurants %}
-        <li>
+        <li style="margin-bottom: 1em;">
+            {% if r.logo %}
+            <img src="{{ r.logo }}" alt="{{ r.name }} logo" style="height: 40px; vertical-align: middle;">
+            {% endif %}
             <strong>{{ r.name }}</strong> — {{ r.cuisines|join:", " }} — ⭐ {{ r.rating }}<br>
             {{ r.address }}, {{ r.city }}, {{ r.postalCode }}
         </li>
