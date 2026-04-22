@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find Restaurants</title>
+</head>
+
+<body>
+    <h1>Find Restaurants</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Search</button>
+    </form>
+
+    {% if restaurants %}
+    <h2>Results</h2>
+    <ul>
+        {% for r in restaurants %}
+        <li>
+            <strong>{{ r.name }}</strong> — {{ r.cuisines|join:", " }} — ⭐ {{ r.rating }}<br>
+            {{ r.address }}, {{ r.city }}, {{ r.postalCode }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+
+</html>
